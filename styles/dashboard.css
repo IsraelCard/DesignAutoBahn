@@ -1,0 +1,10 @@
+ *{
+    display: flex;
+ }
+
+ .catalogo{
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 20px;
+ }
