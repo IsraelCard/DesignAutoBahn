@@ -7,6 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <?php include("front/header.php");?>
 </body>
 </html>
