@@ -12,7 +12,7 @@ include("back/jsonReader.php");
     <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
-    <header><!--Hacer menu principal--></header>
+    <?php include("front/header.php");?>
 <div class="catalogoContainer">
     <table class="catalogo">
         <tr>
