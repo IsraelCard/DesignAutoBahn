@@ -1,6 +1,6 @@
 <?php
-include("back/jsonWriter.php");
-include("back/jsonReader.php");
+include("../back/jsonWriter.php");
+include("../back/jsonReader.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ include("back/jsonReader.php");
     <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
-    <?php include("front/header.php");?>
+    <?php include("header.php");?>
 <div class="catalogoContainer">
     <table class="catalogo">
         <tr>

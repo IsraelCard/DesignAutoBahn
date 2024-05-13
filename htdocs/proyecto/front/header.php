@@ -52,9 +52,9 @@
     
         <!-- direccion de cada boton-->
         <nav>
-            <a href="#">INCIO</a>
-            <a href="#">CATÁLOGO</a>
+            <a href="index.php">INCIO</a>
+            <a href="">CATÁLOGO</a>
             <a href="#">AYUDA</a>
-            <a href="#" class="login">INICIAR SESIÓN</a>
+            <a href="login.php" class="login">INICIAR SESIÓN</a>
         </nav>
 </header>
