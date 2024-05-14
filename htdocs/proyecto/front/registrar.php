@@ -10,17 +10,23 @@
     <?php include("header.php") ?>
 
     <div class="contenedor">
-        <h4>Iniciar Sesión</h4>
+        <h4>Registrate</h4>
         <form action="" method="post">
         <hr><br>
             <label for="">Email:</label>
             <input type="email" name="email" placeholder="Ingresa tu Email">
 
-            <label for="">Contraseña:</label>
-            <input type="password" name="pass" placeholder="Ingresa tu Contraseña">
+            <label for="">Usuario:</label>
+            <input type="text" name="name" placeholder="Nombre de Usuario">
 
-            <input type="submit" value="Iniciar Sesión" class="submit">
-            <p>¿No tienes cuenta? <a href="registrar.php">Registrate</a></p>
+            <label for="">Contraseña:</label>
+            <input type="password" name="pass1" placeholder="Ingresa tu Contraseña">
+
+            <label for="">Confirmar contraseña:</label>
+            <input type="password" name="pass2" placeholder="Ingresa nuevamente tu Contraseña">
+
+            <input type="submit" value="Registrar" class="submit">
+            <p>¿Ya tienes cuenta? <a href="login.php">Iniciar Sesión</a></p>
         </form>
     </div>
 </body>
