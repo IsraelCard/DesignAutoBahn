@@ -1,6 +1,6 @@
 <?php
-include("../back/jsonReader.php");
-include("../back/dataBaseConnection.php");
+include("back/jsonReader.php");
+include("back/dataBaseConnection.php");
 function reloadList() {
     $dirArray = array_diff(scandir("../JSON"),array('.','..'));
     foreach($dirArray as $element){
