@@ -29,13 +29,20 @@ form{
     margin: auto;
 }
 
-label, input{
+label, input, span{
     display: block;
     text-align: left;
     width: 94%;
     margin-bottom: 15px;
     font-size: 17px;
 }
+
+span{
+    background-color: rgba(199, 49, 49, 0.411);
+    border-radius: 4pt;
+    padding: 10px;
+}
+
 
 input{
     padding: 10px;
@@ -46,13 +53,13 @@ input{
 .submit{
     text-align: center;
     font-weight: bold;
-    background-color: rgba(212, 212, 212, 0.899);
+    background-color: whitesmoke;
     width: 100%;
 }
 
 a{
     font-weight: bold;
-    color: rgba(212, 212, 212, 0.899);
+    color: whitesmoke;
 }
 
 input:focus{
