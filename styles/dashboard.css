@@ -1,0 +1,41 @@
+ *{
+   font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+ }
+ body{
+    display: flex;
+    background-color: rgb(221, 221, 221);
+ }
+.AtencionContainer{
+   margin-top: 10vh;
+   margin-right: 10pw;
+   margin-left: 20px;
+   border-radius: 20px;
+   height: fit-content;
+   width: 48vw;
+   background-color: rgb(185, 218, 201);
+   padding: 20px;
+}
+ .Catalogo table{
+   margin: 0 0 40px 0;
+   width: 100%;
+   display: table;
+ }
+ .Catalogo caption{
+   font-size: 20px;
+   font-weight: bold;
+ }
+ .Catalogo th , tr, td{
+   padding: 10px;
+   margin: 5px;
+   text-align: center;
+   
+   border-width: thin;
+   border-color: black;
+ }
+ .Catalogo tr:nth-child(even) {
+   background: #F0F9F0;
+ }
+ .Catalogo  thead {
+   background-color: rgb(42, 157, 144);
+   color: rgb(240, 249, 240);
+ }
