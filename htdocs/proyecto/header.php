@@ -63,7 +63,7 @@
 
                 //Condicion
                 if (!isset($_SESSION['user'])) {
-                    echo '<a href="login.php" class="loginForm">INICIAR SESIÓN</a>';
+                    echo '<a href="login.php" class="loginForm.php">INICIAR SESIÓN</a>';
                 }else{
                     echo '<a href="back/logout.php" class="login">'.htmlspecialchars($_SESSION['user']).'</a>';
                 }
