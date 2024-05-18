@@ -1,24 +1,45 @@
  *{
-   font-family:'Segoe UI', Tahoma, Verdana, sans-serif
+   font-family: "Ubuntu Sans", sans-serif;
  }
  body{
-    display: flex;
-    background-color: rgb(221, 221, 221);
+  background-color: rgb(221, 221, 221);
  }
+ header{
+  display: flex;
+  font-weight: bolder;
+  font-size: 30px;
+ }
+ header h1{
+  background-color: rgb(42, 157, 144);
+  border-radius: 5pt;
+  padding: 5px;
+  color: #fff;
+
+ }
+ .cuerpo{
+    display: grid;
+    grid-template-columns: auto auto;
+ }
+
 .AtencionContainer{
-   margin-top: 10vh;
-   margin-right: 10pw;
+   margin-top: 20px;
+   margin-right: 10pt;
    margin-left: 20px;
-   border-radius: 20px;
+   border-radius: 4pt;
    height: fit-content;
-   width: 48vw;
-   background-color: rgb(185, 218, 201);
+   width: 45vw;
+   background-color: rgb(144, 144, 144);
    padding: 20px;
+}
+
+.Catalogo{
+  overflow: auto;
 }
  .Catalogo table{
    margin: 0 0 40px 0;
    width: 100%;
    display: table;
+   table-layout: fixed;
  }
  .Catalogo caption{
    font-size: 20px;
@@ -28,14 +49,81 @@
    padding: 10px;
    margin: 5px;
    text-align: center;
-   
    border-width: thin;
    border-color: black;
  }
+ .Catalogo th{
+  background: rgb(42, 157, 144);
+ }
+ .Catalogo tr{
+  background: #9c9c9c;
+ }
  .Catalogo tr:nth-child(even) {
-   background: #F0F9F0;
+   background: #ededed;
  }
  .Catalogo  thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
    background-color: rgb(42, 157, 144);
    color: rgb(240, 249, 240);
  }
+.lista span{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  align-self: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.grid-item {
+ height: 45px;
+}
+
+button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 3px;
+}
+
+.borrar:hover{
+  background-color: #ff0000;
+}
+
+.modi:hover{
+  background-color: #20b0c0a3;
+}
+
+button :hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+.AddForm input[type=text]{
+  height: 15px;
+  width: 100px;
+  border-radius: 5pt;
+  border: 0;
+  margin: 3px;
+  padding: 2px;
+
+}
