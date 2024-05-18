@@ -55,6 +55,18 @@
             <a href="index.php">INCIO</a>
             <a href="#">CATÁLOGO</a>
             <a href="#">AYUDA</a>
-            <a href="login.php" class="login">INICIAR SESIÓN</a>
+
+            <!--Imprimir boton de inciar sesion si la sesion user no tiene ningun valor-->
+            <?php
+                //Iniciar sesion
+                session_start();
+
+                //Condicion
+                if (!isset($_SESSION['user'])) {
+                    echo '<a href="login.php" class="loginForm">INICIAR SESIÓN</a>';
+                }else{
+                    echo '<a href="back/logout.php" class="login">'.htmlspecialchars($_SESSION['user']).'</a>';
+                }
+            ?>
         </nav>
 </header>

@@ -9,14 +9,13 @@
 }
 
 .contenedor{
-    background-color: rgb(89,89,89);
+    background-color: rgb(70,70,70);
     color: white;
     text-align: center;
     max-width: 450px;
     padding: 20px;
     margin: 18vh auto;
     border-radius: 4pt;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.521);
 }
 
 .contenedor h4{
@@ -37,10 +36,22 @@ label, input, span{
     font-size: 17px;
 }
 
-span{
-    background-color: rgba(199, 49, 49, 0.411);
+.error, .exito{
+    display: block;
+    text-align: center;
+    width: 94%;
+    margin-bottom: 15px;
+    font-size: 17px;
     border-radius: 4pt;
     padding: 10px;
+}
+
+.error {
+    background-color: rgba(199, 49, 49, 0.411);
+}
+
+.exito{
+    background-color: rgba(40, 165, 40, 0.525);
 }
 
 

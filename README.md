@@ -14,15 +14,21 @@ Para probar el proyecto, ve a c:/xampp/
 
 # Paleta de colores y tipo de letra
 Colores:
-- rgb (89,89,89)
+- rgb (70,70,70)
 - rgb (36,36,36)
 - #002659
 - rgb (0,0,0)
 
 Tipo de letra:
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
 *{
+
     margin: 0;
+
     padding: 0;
+
     font-family: "Ubuntu Sans", sans-serif;
+
 }

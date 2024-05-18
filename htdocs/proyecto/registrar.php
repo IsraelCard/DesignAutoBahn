@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesión</title>
+    <title>Registrar</title>
     <link rel="stylesheet" href="styles/login.css">
+
+    <script>
+        function validateForm(event) {
+            // Obtener los valores de los campos de contraseña
+            var pass1 = document.getElementsByName('pass1')[0].value;
+            var pass2 = document.getElementsByName('pass2')[0].value;
+
+            //Contenedor de mensajes
+            var divAlerts = document.getElementById('alerts');
+
+            // Comprobar si las contraseñas coinciden
+            if (pass1 !== pass2) {
+                // Si no coinciden, mostrar un mensaje de error y evitar el envío del formulario
+                var alert = document.createElement('span');
+                alert.className = 'error';
+                alert.textContent = 'Las contraseñas no coinciden! Por favor, inténtalo de nuevo.';
+
+                divAlerts.appendChild(alert);
+                event.preventDefault(); // Evita el envío del formulario
+            }
+        }
+
+        // Asociar la función validateForm al evento submit del formulario
+        window.onload = function() {
+            document.getElementById('registroForm').addEventListener('submit', validateForm);
+        }
+    </script>
 </head>
 <body>
     <?php include("header.php") ?>
 
     <div class="contenedor">
         <h4>Registrate</h4>
-        <form action="back/registro.php" method="post">
+
+        <form id="registroForm" action="back/registro.php" method="post">
         <hr><br>
-            <label for="">Email:</label>
-            <input type="email" name="email" placeholder="Ingresa tu Email" required>
 
-            <label for="">Usuario:</label>
-            <input type="text" name="name" placeholder="Nombre de Usuario" required>
-
-            <label for="">Contraseña:</label>
-            <input type="password" name="pass1" placeholder="Ingresa tu Contraseña" required>
-
-            <label for="">Confirmar contraseña:</label>
-            <input type="password" name="pass2" placeholder="Ingresa nuevamente tu Contraseña" required>
-
+        <!--Mensajes de alerta-->
+        <div id="alerts">
             <?php
-                // Iniciar sesión
-                session_start();
-
-                // Verificar si hay un mensaje de alerta en la sesión
+                // Verificar si hay un mensaje de alerta en la sesión-->
                 if (isset($_SESSION['mensaje_alerta'])) {
                     // Obtener el mensaje de alerta
                     $mensaje_alerta = $_SESSION['mensaje_alerta'];
@@ -41,10 +57,24 @@
                     unset($_SESSION['mensaje_alerta']);
                 }
             ?>
+        </div>
 
-            <input type="submit" value="Registrar" class="submit">
-            <p>¿Ya tienes cuenta? <a href="login.php">Iniciar Sesión</a></p>
-        </form>
+        <!-- Cuadros de texto para introducir los valores para el registro -->
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Ingresa tu Email" required>
+
+        <label for="name">Usuario:</label>
+        <input type="text" name="name" placeholder="Nombre de Usuario" required>
+
+        <label for="pass1">Contraseña:</label>
+        <input type="password" name="pass1" placeholder="Ingresa tu Contraseña" required>
+
+        <label for="pass2">Confirmar contraseña:</label>
+        <input type="password" name="pass2" placeholder="Ingresa nuevamente tu Contraseña" required>
+
+        <input type="submit" value="Registrar" class="submit">
+        <p>¿Ya tienes cuenta? <a href="loginForm.php">Iniciar Sesión</a></p>
+    </form>
     </div>
 </body>
 </html>
