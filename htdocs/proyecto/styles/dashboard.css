@@ -4,6 +4,9 @@
  body{
   background-color: rgb(221, 221, 221);
  }
+ h2{
+  text-align: center;
+ }
  header{
   display: flex;
   font-weight: bolder;
@@ -14,6 +17,9 @@
   border-radius: 5pt;
   padding: 5px;
   color: #fff;
+  text-align: center;
+  width: 100%;
+  top: 0;
 
  }
  .cuerpo{
@@ -30,6 +36,7 @@
    width: 45vw;
    background-color: rgb(144, 144, 144);
    padding: 20px;
+   overflow: auto;
 }
 
 .Catalogo{
@@ -41,10 +48,7 @@
    display: table;
    table-layout: fixed;
  }
- .Catalogo caption{
-   font-size: 20px;
-   font-weight: bold;
- }
+ 
  .Catalogo th , tr, td{
    padding: 10px;
    margin: 5px;
@@ -68,12 +72,6 @@
    background-color: rgb(42, 157, 144);
    color: rgb(240, 249, 240);
  }
-.lista span{
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  align-self: center;
-}
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -99,31 +97,56 @@ button {
   margin: 3px;
 }
 
-.borrar:hover{
-  background-color: #ff0000;
+input[type=submit]{
+  padding: 1.3em 2em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 3px;
 }
-
-.modi:hover{
-  background-color: #20b0c0a3;
-}
-
-button :hover {
+button:hover,.input[type=submit]:hover {
   background-color: #23c483;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
-
+.borrar:hover{
+  background-color: #ff0000;
+  box-shadow: 0px 15px 20px rgba(255, 0, 0, 0.22);
+  color: #fff;
+  transform: translateY(-7px);
+}
 button:active {
   transform: translateY(-1px);
 }
 
+.AddForm{
+  font-size: large;
+  padding: 5px;
+  justify-items: center;
+}
 .AddForm input[type=text]{
-  height: 15px;
-  width: 100px;
+  width: 80%;
+  height: 30px;
   border-radius: 5pt;
   border: 0;
-  margin: 3px;
-  padding: 2px;
+  align-self: center;
+  background: #ededed;
+  margin: 5px;
 
+}
+.AddForm h3{
+  text-align: left;
+  background: rgb(42, 157, 144);
+  padding: 5px;
+  color: #ededed;
 }

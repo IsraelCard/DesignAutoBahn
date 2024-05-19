@@ -54,7 +54,7 @@
         <nav>
             <a href="index.php">INCIO</a>
             <a href="#">CATÁLOGO</a>
-            <a href="#">AYUDA</a>
+            <a href="contacto.php">AYUDA</a>
 
             <!--Imprimir boton de inciar sesion si la sesion user no tiene ningun valor-->
             <?php

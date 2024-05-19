@@ -9,13 +9,14 @@
 }
 
 .contenedor{
-    background-color: rgb(70,70,70);
+    background-color: rgb(89,89,89);
     color: white;
     text-align: center;
     max-width: 450px;
     padding: 20px;
     margin: 18vh auto;
     border-radius: 4pt;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.521);
 }
 
 .contenedor h4{
@@ -28,30 +29,20 @@ form{
     margin: auto;
 }
 
-label, input, span{
+label, input, span, textarea{
     display: block;
     text-align: left;
     width: 94%;
     margin-bottom: 15px;
     font-size: 17px;
 }
-
-.error, .exito{
-    display: block;
-    text-align: center;
-    width: 94%;
-    margin-bottom: 15px;
-    font-size: 17px;
+p{
+    color: rgb(171, 171, 171);
+}
+span{
+    background-color: rgba(199, 49, 49, 0.411);
     border-radius: 4pt;
     padding: 10px;
-}
-
-.error {
-    background-color: rgba(199, 49, 49, 0.411);
-}
-
-.exito{
-    background-color: rgba(40, 165, 40, 0.525);
 }
 
 
@@ -80,4 +71,10 @@ input:focus{
 .submit:hover {
     background-color: white;
     cursor: pointer;
+}
+.bigtext{
+    padding: 10px;
+    border: none;
+    border-radius: 4pt;
+    height: 10vh;
 }

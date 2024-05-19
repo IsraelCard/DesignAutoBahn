@@ -8,5 +8,4 @@ function reloadList() {
         echo "<button id=".$issue["IssueID"]." class=\"grid-item button\">".$issue["IssueID"]."</button>";
     }
 }
-
 ?>

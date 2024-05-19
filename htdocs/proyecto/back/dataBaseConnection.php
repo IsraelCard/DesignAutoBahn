@@ -16,7 +16,6 @@ function reloadCatalog(){
     }
 
 }
-//<button class=\"borrar\">Borrar</button><button class=\"modi\">Modificar</button></td>
 
 if(isset($_POST["addItem"])){
     addElement();
