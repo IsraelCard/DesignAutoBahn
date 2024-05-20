@@ -1,59 +1,90 @@
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
 
-    *{
-        margin: 0;
-        padding: 0;
-        font-family: "Ubuntu Sans", sans-serif;
+header{
+    display: flex;
+    background-color: #2a2d54;
+    padding: 10px 9vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 80px;
+    border-radius: 4pt;
+    transition: 500ms;
+    padding: 7px;
+}
+
+.logo:hover{
+    box-shadow:0 0 15px rgb(0,0,0,0.4);
+    padding: 7px;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: large;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+    transition: 500ms;
+    padding: 7px;
+    border-radius: 4pt;
+}
+
+nav .login{
+    background-color: #394166;
+}
+
+nav a:hover{
+    background: none;
+    box-shadow:0 0 15px rgb(0,0,0,0.4);
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 7px;
+}
+
+/* Media query para pantallas de 500px o menos */
+@media (max-width: 700px) {
+    header {
+        display:block;
+        flex-direction: column; /* Cambia la dirección de los botones a vertical */
+        align-items: center; /* Centra los botones verticalmente */
+        margin-bottom: 5px;
     }
 
-    header{
-        display: flex;
-        background-color: rgb(36, 36, 36);
-        margin: 0;
-        padding: 25px;
-        align-items: center;
-        justify-content: space-between;
+    nav a {
+        display:block;
+        flex-direction: column; /* Cambia la dirección de los botones a vertical */
+        align-items: center; /* Centra los botones verticalmente */
+        margin-bottom: 10px;
+
     }
 
-    nav a{
-        text-decoration: none;
-        font-size: large;
-        color: whitesmoke;
-        font-weight: bold;
-        font-size: 19px;
-        margin-left: 5px;
-        transition: 500ms ease-in-out;
-        padding: 7px;
-        border-radius: 4pt;
+    /* Elimina el margen inferior del último botón */
+    header nav a:last-child {
+        margin-bottom: 0;
     }
+}
 
-    .login{
-        background-color: rgb(65, 65, 65);
-        padding: 7px;
-        border-radius: 4pt;
-    }
-
-    nav a:hover{
-        background-color: rgb(89, 89, 89);
-    }
-
-    .logo{
-        width: 30px;
-    }
 </style>
-
 <!-- Contenedor -->
 <header>
         <!-- logo -->
         <a class="logo" href="index.php">
-            <img src="" alt="">
+            <img src="assets/images/logo.png" alt="FASTCAR">
         </a>
     
         <!-- direccion de cada boton-->
         <nav>
             <a href="index.php">INCIO</a>
-            <a href="#">CATÁLOGO</a>
+            <a href="catalogo.php">CATÁLOGO</a>
             <a href="contacto.php">AYUDA</a>
 
             <!--Imprimir boton de inciar sesion si la sesion user no tiene ningun valor-->

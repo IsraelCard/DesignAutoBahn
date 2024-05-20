@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
@@ -29,15 +31,17 @@
             ?>
 
             <!--Cuadros de texto para introducir email y constraseña-->
-            <label for="email">Email:</label>
+            <label for="email"><img src="assets/images/icons/email.png" class="icon">Email:</label>
             <input type="email" name="email" placeholder="Ingresa tu Email" required>
 
-            <label for="pass">Contraseña:</label>
+            <label for="pass"><img src="assets/images/icons/pass.png" class="icon">Contraseña:</label>
             <input type="password" name="pass" placeholder="Ingresa tu Contraseña" required>
 
             <input type="submit" value="Iniciar Sesión" class="submit">
-            <p>¿No tienes cuenta? <a href="registrar.php">Registrate</a></p>
+            <p>¿No tienes cuenta? <a href="registrar.php" class="login-link">Registrate</a></p>
         </form>
     </div>
+
+    <?php include('footer.php') ?>
 </body>
 </html>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/login.css">
 
     <script>
@@ -60,21 +62,23 @@
         </div>
 
         <!-- Cuadros de texto para introducir los valores para el registro -->
-        <label for="email">Email:</label>
+        <label for="email"><img src="assets/images/icons/email.png" class="icon">Email:</label>
         <input type="email" name="email" placeholder="Ingresa tu Email" required>
 
-        <label for="name">Usuario:</label>
+        <label for="name"><img src="assets/images/icons/user.png" class="icon">Usuario:</label>
         <input type="text" name="name" placeholder="Nombre de Usuario" required>
 
-        <label for="pass1">Contraseña:</label>
+        <label for="pass1"><img src="assets/images/icons/pass.png" class="icon">Contraseña:</label>
         <input type="password" name="pass1" placeholder="Ingresa tu Contraseña" required>
 
-        <label for="pass2">Confirmar contraseña:</label>
+        <label for="pass2"><img src="assets/images/icons/pass.png" class="icon">Confirmar contraseña:</label>
         <input type="password" name="pass2" placeholder="Ingresa nuevamente tu Contraseña" required>
 
         <input type="submit" value="Registrar" class="submit">
         <p>¿Ya tienes cuenta? <a href="loginForm.php">Iniciar Sesión</a></p>
     </form>
     </div>
+
+    <?php include('footer.php') ?>
 </body>
 </html>

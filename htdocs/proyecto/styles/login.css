@@ -9,72 +9,107 @@
 }
 
 .contenedor{
-    background-color: rgb(89,89,89);
-    color: white;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid #dadfe9;
     text-align: center;
-    max-width: 450px;
+    max-width: 500px;
     padding: 20px;
-    margin: 18vh auto;
+    margin: 20vh auto;
     border-radius: 4pt;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.521);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.4);
 }
 
 .contenedor h4{
     font-size: 30px;
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
-form{
+.contenedor form{
     width: 75%;
     margin: auto;
 }
 
-label, input, span, textarea{
+.contenedor hr{
+    height: 0.5px;
+    background-color: #dadfe9;
+    border: none;
+}
+
+.contenedor .icon{
+    width: 25px;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.contenedor label, input, textarea{
     display: block;
     text-align: left;
-    width: 94%;
+    width: 100%;
     margin-bottom: 15px;
     font-size: 17px;
-}
-p{
-    color: rgb(171, 171, 171);
-}
-span{
-    background-color: rgba(199, 49, 49, 0.411);
-    border-radius: 4pt;
-    padding: 10px;
+    transition: 500ms;
 }
 
-
-input{
+.contenedor input{
     padding: 10px;
-    border: none;
+    border: 1px solid #dadfe9;
     border-radius: 4pt;
 }
 
-.submit{
+.bigtext{
+    padding: 10px;
+    border: 1px solid #dadfe9;
+    border-radius: 4pt;
+    height: 10vh;
+}
+
+.contenedor .submit{
     text-align: center;
     font-weight: bold;
-    background-color: whitesmoke;
-    width: 100%;
+    background-color: #2a2d54d8;
+    color: rgb(250, 250, 250);
 }
 
-a{
+.contenedor a{
     font-weight: bold;
-    color: whitesmoke;
+    color: #2a2d54d8;
+    font-size: 17px;
+    transition: 500ms;
 }
 
-input:focus{
+.contenedor input:focus, .contenedor .bigtext:focus{
     outline: none;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.4);
 }
 
 .submit:hover {
-    background-color: white;
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.4);
+    background-color: #394166d8;
+    color: white;
     cursor: pointer;
 }
-.bigtext{
-    padding: 10px;
-    border: none;
+
+.contenedor a:hover{
+    font-size: 19px;
+    color: #394166d8;
+    text-decoration: none;
+}
+
+.error, .exito{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 17px;
     border-radius: 4pt;
-    height: 10vh;
+    padding: 10px;
+}
+
+.error {
+    background-color: rgba(199, 49, 49, 0.411);
+}
+
+.exito{
+    background-color: rgba(40, 165, 40, 0.525);
 }
