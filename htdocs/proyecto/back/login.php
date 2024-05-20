@@ -17,8 +17,12 @@
         //Iniciar sesion
         session_start();
 
-        //Asignar el nombre de usuario a la sesion user
+        //Asignar el nombre de usuario a la sesion user y sus datos
+        $_SESSION['id'] = $user['ID_usuario'];
+        $_SESSION['email'] = $user['correo'];
         $_SESSION['user'] = $user['nombre'];
+        $_SESSION['pass'] = $user['contraseña'];
+        $_SESSION['rol'] = 'user';
 
         //Redirigir a index.php
         header("Location: ../index.php");
