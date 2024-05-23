@@ -113,3 +113,15 @@
 .exito{
     background-color: rgba(40, 165, 40, 0.525);
 }
+
+@media (max-width: 730px) {
+    .contenedor{
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 530px) {
+    .contenedor{
+        max-width: 300px;
+    }
+}

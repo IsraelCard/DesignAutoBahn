@@ -11,6 +11,13 @@
 <body>
     <?php include("header.php") ?>
 
+    <!--comprobar si la sesion de un usuario esta inciada, en caso de existir mandarlo a index-->
+    <?php 
+        if(isset($_SESSION['user'])){
+            header("Location: index.php");
+        }
+    ?>
+
     <div class="contenedor">
         <h4>Iniciar Sesión</h4>
         <form action="back/login.php" method="post">
