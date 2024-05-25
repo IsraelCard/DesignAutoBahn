@@ -11,33 +11,63 @@
 <body>
     <?php include("header.php") ?>
 
+    <!--comprobar si la sesion de un usuario esta inciada, en caso de no existir mandarlo a login-->
+    <?php 
+        if(!isset($_SESSION['user'])){
+            header("Location: loginForm.php");
+        }
+    ?>
+
     <div class="cont-cuenta">        
         <!--Contenedor de todos los autos del usuario-->
         <div class="cont-pedidos">
             <h4>Mis autos</h4>
 
-            <!--Contenedor del auto
-            <div class="pedidos">
-                <div class="pedido">
-                    <h6>VOLKSWAGEN CADDY</h6>
-                    <img src="http://autostocksolutions.free.nf/assets/images/featured-cars/fc1.jpeg" alt="auto-img">
-                </div>
+            <!--Contenedor del auto-->
+            <?php
+                $iduser=$_SESSION['id'];//ID usaurio
 
-                <div class="info-pedido">
-                    <p>Id Pedido:</p>
-                    <p>Sucursal:</p>
-                    <p>Ubicacion:</p>
-                    <p>Estado:</p>
-                </div>
-            </div>
--->
+                $bd = new mysqli("localhost","root","","inventario");//BD conexion
+                
+                //Consulta del pedido
+                $query = "SELECT c.Modelo as 'nombre', c.imagen as 'imagen', p.ID_pedido, s.nombre as 'sucursal', s.ubicacion, p.estado
+                FROM pedidos as p 
+                JOIN sucursales as s
+                JOIN catalogo as c 
+                ON p.ID_sucursal = s.ID_sucursal AND p.ID_auto = c.ID_auto
+                where ID_usuario = $iduser;";
 
-            <!--En caso de no existir registro-->
-            <div class="pedidos-vacio">
-                <img src="assets/images/icons/triste.png"><br>
-                <span>Lo sentimos, parece que no cuentas con ningun auto</span><br>
-                <span>Puedes abrir el catálogo para conocer algun auto de tu gusto.</span>
-            </div>
+                $result = $bd->query($query);
+                //Imprimir el pedido en caso de existir
+                if ($result->num_rows > 0) {
+                    while ($datos=$result->fetch_assoc()) {
+            ?>      
+                        <div class="pedidos">
+                            <div class="pedido">
+                                <h6><?php echo $datos["nombre"]?></h6>
+                                <img src="assets/images/featured-cars/<?php echo $datos["imagen"]?>" alt="auto">
+                            </div>
+    
+                            <div class="info-pedido">
+                                <p>Id Pedido: <?php echo $datos["ID_pedido"]?></p>
+                                <p>Sucursal: <?php echo $datos["sucursal"]?></p>
+                                <p>Ubicacion: <?php echo $datos["ubicacion"]?></p>
+                                <p>Estado: <?php echo $datos["estado"]?></p>
+                            </div>
+                        </div>
+            <?php
+                    }
+                }else{
+            ?>
+                        <!--En caso de no existir autos-->
+                        <div class="pedidos-vacio">
+                            <img src="assets/images/icons/triste.png"><br>
+                            <span>Lo sentimos, parece que no cuentas con ningun auto</span><br>
+                            <span>Puedes abrir el catálogo para conocer algun auto de tu gusto.</span>
+                        </div>
+            <?php
+                }
+            ?>
         </div>
 
         <!--Contenedor de datos del usuario-->
@@ -45,9 +75,9 @@
             <h4>Mi cuenta</h4>
 
             <!--Datos-->
-                <p>Id:</p>
-                <p>Email:</p>
-                <p>Usuario:</p>
+            <p>Id: <?php echo $_SESSION['id'] ?></p>
+            <p>Email: <?php echo $_SESSION['email'] ?></p>
+            <p>Usuario: <?php echo $_SESSION['user'] ?></p>
 
             <a href="catalogo.php">Catálogo</a>
             <a href="back/logout.php" class="logout">Cerrar Sesión</a>
