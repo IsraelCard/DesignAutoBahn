@@ -2,6 +2,7 @@
 include("back/jsonReader.php");
 include("back/dataBaseConnection.php");
 include("back/LoadDashboard.php");
+include("back/listhandler.php");
 if(empty($_GET["ID_PERSONAL"])){
     header("Location: back/loginDASHBOARD.php");
 }
@@ -12,7 +13,7 @@ if(empty($_GET["ID_PERSONAL"])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro de atención a clientes</title>
+    <title>Tablero</title>
     <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
@@ -52,11 +53,39 @@ if(empty($_GET["ID_PERSONAL"])){
     <div class="AtencionContainer">
     <form action="" method="post" class="AddForm">
         <h2>Añadir inventario</h2>
-        <h3>Modelo:</h3> <input type="text" name="addModel" placeholder="Inserta el modelo"> <br>
+        <h3>Modelo:</h3> <select name="addModel">
+            <?php
+            loadModelos();
+            ?>
+        </select> <br>
         <h3>Precio:</h3>$<input type="text" name="addProze" placeholder="Inserta el precio">Mxn <br>
-        <h3>Ubicacion</h3> <input type="text" name="addUbi" placeholder="Inserta la ubicacion"> <br>
+        <h3>Ubicacion</h3> <select name="addUbi">
+            <?php
+            loadSucursales();
+            ?>
+        </select> <br>
         <input type="submit" name="addItem" value="Añadir" class="input">
     </form>
+</div>
+<div class="AtencionContainer">
+<div class="Catalogo">
+        <table>
+            <h2>Pedidos</h2>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Sucursal</th>
+                    <th>Estado</th>
+                </tr>
+                <tbody>
+                    <?php
+                    reloadPedidos();
+                    ?>
+                </tbody>
+            </thead>
+        </table>
+    </div>
 </div>
 </div>
 </body>
