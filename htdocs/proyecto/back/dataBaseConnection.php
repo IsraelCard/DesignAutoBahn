@@ -1,7 +1,11 @@
 <?php
 $catalogoBD = new mysqli( "localhost","root","","inventario");
 function reloadCatalog(){
-    $query = mysqli_query($GLOBALS['catalogoBD'],"select * from catalogo;");
+    $query = mysqli_query($GLOBALS['catalogoBD'],"
+    SELECT c.ID_auto,m.modelo as \"Modelo\",s.nombre as \"Ubicacion\",c.Precio
+FROM catalogo c
+JOIN sucursales s ON c.Ubicacion = s.idSucursal
+JOIN modelos m ON c.Modelo = m.idModelo;");
     while($row = mysqli_fetch_array($query)){
         if(isset($_POST["DelID"])){
             removeElement($_POST["DelID"]);
@@ -14,7 +18,6 @@ function reloadCatalog(){
         </form>
         </tr>";
     }
-
 }
 
 if(isset($_POST["addItem"])){
@@ -37,4 +40,13 @@ function removeElement($ID){
     }
 }
 
+function reloadPedidos(){
+    $query = mysqli_query($GLOBALS['catalogoBD'],
+    "SELECT p.ID_pedido,p.ID_usuario as \"Usuario\",s.nombre as \"Ubicacion\",p.estado
+FROM pedidos p
+JOIN sucursales s ON p.ID_sucursal = s.idSucursal;");
+    while($row = mysqli_fetch_array($query)){
+        echo "<tr><td>".$row["ID_pedido"]."</td><td>".$row["Usuario"]."</td><td>".$row["Ubicacion"]."</td><td>".$row["estado"]."</td></tr>";
+}
+}
 ?>

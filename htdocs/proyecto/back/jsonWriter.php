@@ -11,7 +11,7 @@
     $Contenido = $_POST["Contenido"];
 
     $ini = random_int(100,999);
-    $issueID = $IDCliente.$ini;
+    $issueID = $IDCliente."_".$ini;
     $array = [
         "IssueID" => "$issueID",
         "IDCliente" => "$IDCliente",
