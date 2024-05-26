@@ -36,7 +36,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#">VOLKSWAGEN AMAROK</a></h2>
+									<h2><a href="contacto.php">VOLKSWAGEN AMAROK</a></h2>
 									<h3>$892,948</h3>
 									<p>
 									El arribo de esta pickup mediana de la división Volkswagen Vehículos Comerciales se dio en 2010 como modelo 2011 y desde entonces se ha colocado en la parte más alta del segmento.  
@@ -60,7 +60,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#">VOLKSWAGEN CADDY<span></span></a></h2>
+									<h2><a href="contacto.php">VOLKSWAGEN CADDY<span></span></a></h2>
 									<h3>$640,700</h3>
 									<p>
 									Aunque no lo parezca, este vehículo comercial compacto está montado sobre la plataforma PQ35 que entre tantos modelos, dio vida al Bora, solo que está convenientemente modificada para soportar el trabajo pesado.  
@@ -84,7 +84,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#">VOLKSWAGEN CRAFTER<span></span></a></h2>
+									<h2><a href="contacto.php">VOLKSWAGEN CRAFTER<span></span></a></h2>
 									<h3>$945,000</h3>
 									<p>
 									El vehículo comercial más grande de Volkswagen (sin contar su línea de camiones) se encuentra en su cuarta generación, aunque en realidad, sólo hemos conocido dos en México. 
@@ -108,7 +108,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#">VOLKSWAGEN CROSS SPORT<span></span></a></h2>
+									<h2><a href="contacto.php">VOLKSWAGEN CROSS SPORT<span></span></a></h2>
 									<h3>$1,181,070</h3>
 									<p>
 									Volkswagen creó la versión coupé del Teramont, misma que toma el nombre de Cross Sport. A diferencia de su hermana, este modelo se distingue por solo tener dos filas de asientos. 
@@ -134,7 +134,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#">VOLKSWAGEN GOLF GTI<span></span></a></h2>
+									<h2><a href="contacto.php">VOLKSWAGEN GOLF GTI<span></span></a></h2>
 									<h3>$819,070</h3>
 									<p>
 									Por sí mismo, el Golf es un auto icónico, pero cuando se agregan las siglas GTI, estamos hablando de una verdadera leyenda que dio origen a los hot hatches.  
@@ -158,7 +158,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#">VOLKSWAGEN JETTA<span></span></a></h2>
+									<h2><a href="contacto.php">VOLKSWAGEN JETTA<span></span></a></h2>
 									<h3>$433,070</h3>
 									<p>
 									Después de una sexta generación para el olvido, el Jetta MK7 vuelve a colocarse como una de las mejores opciones del segmento. 
@@ -182,7 +182,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#"><span>VOLKSWAGEN JETTA GLI</span></a></h2>
+									<h2><a href="contacto.php"><span>VOLKSWAGEN JETTA GLI</span></a></h2>
 									<h3>$654,070</h3>
 									<p>
 									Versión deportiva de la séptima generación del Jetta. El motor es un cuatro cilindros de 2.0 litros TSI capaz de entregar 230 hp y 258 lb-pie de torque, que se acopla a una transmisión de doble embrague DSG de siete relaciones. 
@@ -206,7 +206,7 @@
 									</div>
 								</div>
 								<div class="featured-cars-txt">
-									<h2><a href="#">VOLKSWAGEN NIVUS<span></span></a></h2>
+									<h2><a href="contacto.php">VOLKSWAGEN NIVUS<span></span></a></h2>
 									<h3>$479,070</h3>
 									<p>
 									El Nivus es complemento al T-Cross en el segmento de SUV subcompactas. La principal diferencia, es obviamente su perfil más juvenil y deportivo, así como un propulsor más moderno 
@@ -219,10 +219,6 @@
 			</div>
 
 		</section>
-		
-
-	<!--AQUI EMPIEZA EL FOOTER XD-->
-	<?php include('footer.php'); ?>	
-	<!--contact end-->
+		<?php include("footer.php");?>
 </body>
 </html>

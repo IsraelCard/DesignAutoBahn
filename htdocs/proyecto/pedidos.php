@@ -30,7 +30,7 @@
                 $bd = new mysqli("localhost","root","","inventario");//BD conexion
                 
                 //Consulta del pedido
-                $query = "SELECT c.Modelo as 'nombre', c.imagen as 'imagen', p.ID_pedido, s.nombre as 'sucursal', s.ubicacion, p.estado
+                $query = "SELECT c.Modelo as 'nombre', c.imagen as 'imagen', p.ID_pedido, s.nombre as 'sucursal', p.estado
                 FROM pedidos as p 
                 JOIN sucursales as s
                 JOIN catalogo as c 
@@ -51,7 +51,6 @@
                             <div class="info-pedido">
                                 <p>Id Pedido: <?php echo $datos["ID_pedido"]?></p>
                                 <p>Sucursal: <?php echo $datos["sucursal"]?></p>
-                                <p>Ubicacion: <?php echo $datos["ubicacion"]?></p>
                                 <p>Estado: <?php echo $datos["estado"]?></p>
                             </div>
                         </div>
