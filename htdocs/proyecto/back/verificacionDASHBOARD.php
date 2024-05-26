@@ -16,7 +16,7 @@ if($row["ID_personal"]==$valorPASS){
 }
 }
 if($validado == false){
-    //header("location: loginDASHBOARD.php");
+    header("location: loginDASHBOARD.php");
     //Algún dato es incorrecto
     echo "USUARIO INCORRECTO";
 }
