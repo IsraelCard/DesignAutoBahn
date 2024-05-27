@@ -16,6 +16,8 @@
         video {
             width: 50%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         #bienvenido {
@@ -32,6 +34,7 @@
             padding: 0 20px; 
             margin-left: 200px;
             margin-right: 200px;
+            color:black;
         }
     </style>
 </head>
